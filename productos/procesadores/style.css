@@ -1,0 +1,115 @@
+/*Fuentes importadas*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+}
+
+header {
+    background: #11001c;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+header .breadcrumb {
+    background-color: red;
+}
+header .breadcrumb-content {
+    gap: 10px;
+}
+.contenedor {
+    max-width: 1200px;
+    padding: 1px;
+    margin: auto;
+    display: block;
+    justify-content: space-between;
+    contain: paint;
+    margin: 30px;
+}
+
+.contenedor-productos {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 1px;
+    width: 100%;
+    transition: 0.5s;
+    background: linear-gradient(to bottom,
+        #03071e 0%,
+        #32004f 20%,
+        #220135 40%,
+        #190028 60%,
+        #11001c 80%);
+        height: 100vh;
+}
+
+
+.contenedor-productos .item {
+    display: grid;
+    max-width: 200px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #760AFF;
+    padding: 10%;
+    transition: 0.1s;
+    border-radius: 5px;
+    grid-template-rows: 20% 50% auto;
+    grid-gap: 10px;
+}
+
+.contenedor-productos .item:hover {
+    box-shadow: 0 0 5px rgb(255, 173, 255);
+    transform: scale(1.007);
+}
+
+.contenedor-productos .item .titulo-produto {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+.contenedor-productos .item .img-producto {
+    width: 100%;
+}
+
+
+.contenedor-productos .item .precio-producto {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+    color: white;
+}
+
+
+.contenedor-productos .item .boton-producto:hover{
+    box-shadow: 0 0 5px rgb(46, 0, 139);
+    transform: scale(1.20);
+    background-color: rgb(49, 0, 155) ;
+}
+.contenedor-productos .item .boton-producto {
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    border: 2px black solid;
+    background-color: rgb(29, 0, 91);
+    padding: 5px;
+    border-radius: 5px;
+    color: aliceblue;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+footer h1 {
+    text-align: center;
+}
