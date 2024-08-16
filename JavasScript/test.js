@@ -1,31 +1,15 @@
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const responsiveNavContainer = document.querySelector(".responsive-nav-container");
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.carrusel-item'); // Cambio de clase
-    const totalSlides = slides.length;
-    const itemsPerView = 4;
-
-    if (index > totalSlides - itemsPerView) {
-        currentIndex = totalSlides - itemsPerView;
-    } else if (index < 0) {
-        currentIndex = 0;
-    } else {
-        currentIndex = index;
-    }
-
-    document.querySelector('.carrusel-inner').style.transform = `translateX(${-currentIndex * (100 / itemsPerView)}%)`; // Cambio de clase
-}
-
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
-
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentIndex);
+    menuToggle.addEventListener("click", function() {
+        responsiveNavContainer.classList.toggle("open");
+    });
 });
 
-/**Animaciones para el carrusel de objetos */
+const menuToggle = document.querySelector('.menu-toggle');
+const responsiveNavContainer = document.querySelector('.responsive-nav-container');
+
+menuToggle.addEventListener('click', () => {
+    responsiveNavContainer.classList.toggle('open');
+});

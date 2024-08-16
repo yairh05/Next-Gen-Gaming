@@ -7,31 +7,54 @@
     <link rel="stylesheet" href="/css/test.css">
 </head>
 <body>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h4>Punto de Venta:</h4>
-                <p>C.C Unilago: Locales 2-275 2-274 2do piso</p>
-                <p>Teléfonos: (601) 2015011 - (601) 201 5012</p>
-                <p>Email: <a href="mailto:ventas@nextgengaming.com">ventas@nextgengaming.com</a></p>
-                <p>Whatsapp: <a href="https://wa.me/573214718344" target="_blank">3214718344</a></p>
+    <header>
+        <div class="root" id="header">
+            <div class="logo">
+                <a href="/html/home1.html"><img src="/img/logo.png" alt="Logo"></a>
             </div>
-            <div class="footer-column">
-                <h4>Síguenos</h4>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><img src="path-to-facebook-icon" alt="Facebook"></a>
-                    <a href="#" class="social-icon"><img src="path-to-twitter-icon" alt="Twitter"></a>
-                    <a href="#" class="social-icon"><img src="path-to-instagram-icon" alt="Instagram"></a>
-                    <a href="#" class="social-icon"><img src="path-to-youtube-icon" alt="YouTube"></a>
-                </div>
+            <div class="search-bar">
+                <form action="">
+                    <input type="text" placeholder="Buscar...">
+                    <ion-icon name="search" class="search-icon"></ion-icon>
+                </form>
+            </div>
+            <div class="menu-toggle">
+                <ion-icon name="reorder-three-outline" class="menu-icon"></ion-icon>
+            </div>
+            <div class="nav-container">
+                <nav class="nav">  
+                    <ul>
+                        <li><a href="/html/home1.html">inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Combos</a></li>
+                        <li><a href="/html/about-us.html">Acerca de nosotros</a></li>
+                        <li><a href="/html/contactanos.html">Contactanos</a></li>
+                    </ul>  
+                    <a href="/html/login.html" class="user-icon-link">
+                        <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
+                    </a>
+                </nav>
+            </div>
+            <div class="responsive-nav-container">
+                <nav class="responsive-nav">
+                    <ul>
+                        <li><a href="/html/home1.html">inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="/html/about-us.html">Acerca de nosotros</a></li>
+                        <li><a href="/html/contactanos.html">Contactanos</a></li>
+                    </ul>
+                    <a href="/html/login.html" class="user-icon-link">
+                        <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
+                    </a>
+                </nav>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p><a href="#">Términos y condiciones</a> | <a href="#">Política de privacidad</a> | © 2024 NextGenGaming Todos los Derechos Reservados | <a href="#">Política de Cookies</a></p>
-        </div>
-    </footer>
-
+    </header>
     
+    
+    <!--Script for icons-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="/JavasScript/test.js"></script>
 </body>
 </html>
