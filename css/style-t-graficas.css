@@ -647,7 +647,7 @@ li a {
 footer {
   width: 100%;
   background-color: #001233;
-  color: var(--text-color);
+  color: white;
   padding: 2rem 1rem;
 }
 
