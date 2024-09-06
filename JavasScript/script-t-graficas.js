@@ -1,5 +1,8 @@
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica1').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica1').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -48,7 +51,7 @@ document.getElementById('tarjetaGrafica1').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -58,12 +61,15 @@ document.getElementById('tarjetaGrafica1').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica2').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica2').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -112,7 +118,7 @@ document.getElementById('tarjetaGrafica2').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -122,12 +128,15 @@ document.getElementById('tarjetaGrafica2').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica3').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica3').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -176,7 +185,7 @@ document.getElementById('tarjetaGrafica3').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -186,12 +195,12 @@ document.getElementById('tarjetaGrafica3').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica4').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica4').addEventListener('click', function(event) {
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -240,7 +249,7 @@ document.getElementById('tarjetaGrafica4').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -250,12 +259,15 @@ document.getElementById('tarjetaGrafica4').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica5').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica5').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -304,7 +316,7 @@ document.getElementById('tarjetaGrafica5').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -314,12 +326,15 @@ document.getElementById('tarjetaGrafica5').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica6').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica6').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -368,7 +383,7 @@ document.getElementById('tarjetaGrafica6').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -378,12 +393,15 @@ document.getElementById('tarjetaGrafica6').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica7').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica7').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -432,7 +450,7 @@ document.getElementById('tarjetaGrafica7').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -442,12 +460,15 @@ document.getElementById('tarjetaGrafica7').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica8').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica8').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -496,7 +517,7 @@ document.getElementById('tarjetaGrafica8').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -506,12 +527,15 @@ document.getElementById('tarjetaGrafica8').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica9').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica9').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -560,7 +584,7 @@ document.getElementById('tarjetaGrafica9').addEventListener('click', function() 
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -570,12 +594,15 @@ document.getElementById('tarjetaGrafica9').addEventListener('click', function() 
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 2 (procesador2)
-document.getElementById('tarjetaGrafica10').addEventListener('click', function() {
+document.getElementById('tarjetaGrafica10').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -624,7 +651,7 @@ document.getElementById('tarjetaGrafica10').addEventListener('click', function()
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -634,7 +661,7 @@ document.getElementById('tarjetaGrafica10').addEventListener('click', function()
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });

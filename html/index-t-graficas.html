@@ -12,7 +12,8 @@
            />
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>T.Graficas</title>
+    <link rel="icon" href="/img/logo.png" type="image/x-icon"/>
+    <title>Tarjetas Graficas</title>
 </head>
 <body><header class="header">
     <div class="navbar">
@@ -35,6 +36,7 @@
                     <a href="/html/index-torres.html">Torres</a>
                     <a href="/html/index-procesadores.html">Procesadores</a>
                     <a href="/html/index-t-graficas.html">Tarjetas graficas</a>
+                    <a href="/html/index-fuentes-poder.html">Fuentes de poder</a>
                 </div>
             </li>
             <li><a href="/html/index-nosotros.html">Nosotros</a></li>
@@ -43,7 +45,40 @@
         <!--Boton log in-->
         <div class="button-li">
         <a href="/html/login.html" class="user-icon-link"><ion-icon name="person-circle-outline" class="user-icon"></ion-icon></a>
-        <a href="#" class="shopping-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="container-icon">
+            <!-- Icono del carrito -->
+            <div class="container-cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+            </div>
+
+            <!-- Contador de productos -->
+            <div class="count-products">
+                <input type="text" value="0" class="contador-productos" readonly>
+            </div>
+
+            <!-- Contenedor desplegable del carrito -->
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product">
+                    <div class="carrito" id="carrito">
+                        <div class="header-carrito">
+                            <h2>Tu Carrito</h2>
+                        </div>
+                        <div class="carrito-items"></div>
+                        <div class="carrito-total">
+                            <div class="fila">
+                                <strong>Tu Total</strong>
+                                <span class="carrito-precio-total">$0</span>
+                            </div>
+                            <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="toggle-btn">
             <i class="fa-solid fa-bars"></i>
@@ -51,10 +86,18 @@
         <!--<a href="#" class="action-btn"></a>-->
     </div>
     <div class="dropdown-menu">
-        <li><a href="/html/home1.html">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="/html/about-us.html">Nosotros</a></li>
-        <li><a href="/html/contactanos.html">Contacto</a></li>
+        <li><a href="home1.html">Inicio</a></li>
+        <li><a href="#">Productos</a>
+            <div class="dropdown-content">
+                <a href="/html/index-boards.html">Boards</a>
+                <a href="/html/index-torres.html">Torres</a>
+                <a href="/html/index-procesadores.html">Procesadores</a>
+                <a href="/html/index-t-graficas.html">Tarjetas graficas</a>
+                <a href="/html/index-fuentes-poder.html">Fuentes de poder</a>
+            </div>
+        </li>
+        <li><a href="index-nosotros.html">Nosotros</a></li>
+        <li><a href="contactanos.html">Contacto</a></li>
         <!--<li><a href="#" class="action-btn"></a></li>-->
     </div>
 </header>
@@ -171,5 +214,7 @@ type="text/javascript"
 src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/JavasScript/script-t-graficas.js"></script>
+<script src="/JavasScript/app1.js"></script>
+<script src="/JavasScript/home.js"></script>
 </body>
 </html>

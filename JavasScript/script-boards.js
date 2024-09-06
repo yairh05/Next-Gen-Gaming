@@ -1,63 +1,10 @@
 //obtencion de datos para el producto 1 (board1)
-document.getElementById('board1').addEventListener('click', function() {
-    // Obtener información del producto desde la clase asignada al producto
-    const name = this.querySelector('.titulo-produto').textContent;
-    const description = this.querySelector('.titulo-produto').textContent;
-    const image = this.querySelector('.img-producto').src;
-    const price = this.querySelector('.precio-producto').textContent;
-//popup que imprime la informacion del producto y modifica el html para agragar descripcion.
-    Swal.fire({
-        title: name,
-        html: `
-            <img src="${image}" alt="Foto del producto" style="width:50%;max-height:280px;object-fit:cover;margin-bottom:15px;">
-            <div>
-            <p><strong>Descripción</strong>
-            <br><br>
-            ¡Phantom Gaming está diseñado por jugadores y para jugadores! Debajo de su implacable apariencia
-            se encuentran abundantes funciones orientadas a los juegos y excelentes capacidades de juego.
-            ¡Se trata de brindar una nueva experiencia de juego a los jugadores!
-            </p>
-            <div>
-            <br>
-            <h4 style="text-aling: center;">Caracteristicas</h4>
-            </div>
-            <div style="text-align: left;">
-            <br>
-            <ul><li>Compatible con procesadores de escritorio AMD AM4 Socket Ryzen™ 3000, 3000 G-Series, 4000 G-Series, 5000 y 5000 G-Series *</li>
-            <li>Diseño de 8 fases de potencia, Digi Power</li>
-            <li>Soporta DDR4 4733+ (OC)</li>
-            <li>4 SATA3, 1 Híper M.2 (PCIe Gen4 x4)</li>
-            <li>8 USB 3.2 Gen1 (2 frontales, 6 traseros)</li>
-            <li>Audio HD de 7.1 canales (códec de audio Realtek ALC1220/ALC1200), Nahimic Audio</li>
-            </ul>
-            </p>
-            </div>
-            <br>
-            <p style="font-size:30px;">
-            <strong>Precio:</strong> ${price}
-            </p>
-        `,
-        grow: 'fullscreem',
-        allowOutsideClick: false,
-        allowScapeKey: false,
-        allowEnterKey: false,
-        showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
-        cancelButtonText: 'Cancelar',
-        confirmButtonColor: 'rgb(29, 0, 91)',
-        cancelButtonColor: '#d33',
-        width: '80%',
-        padding: '3em',
-        background: 'white',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
-        }
-    });
-});
-//obtencion de datos para el producto 2 (board2)
-document.getElementById('board2').addEventListener('click', function() {
+document.getElementById('board1').addEventListener('click', function(event) {
+     // Evitar que el popup se abra si se hace clic en el botón "Comprar"
+     if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
+    
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -103,7 +50,7 @@ document.getElementById('board2').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -113,12 +60,82 @@ document.getElementById('board2').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
+        }
+    });
+});
+
+//obtencion de datos para el producto 2 (board2)
+document.getElementById('board2').addEventListener('click', function(event) {
+    // Evitar que el popup se abra si se hace clic en el botón "Comprar"
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
+    // Obtener información del producto desde los atributos del div
+    const name = this.querySelector('.titulo-produto').textContent;
+    const description = this.querySelector('.titulo-produto').textContent;
+    const image = this.querySelector('.img-producto').src;
+    const price = this.querySelector('.precio-producto').textContent;
+
+    Swal.fire({
+        title: name,
+        html: `
+            <img src="${image}" alt="Foto del producto" style="width:50%;max-height:280px;object-fit:cover;margin-bottom:15px;">
+            <div>
+            <p><strong>Descripción</strong>
+            <br><br>
+            ¡Riptide lleva el nombre de un tipo específico de corriente de agua con fuertes olas que se produce en el océano,
+            lo que representa la filosofía de la fuerza ilimitada, tranquila y de doble cara del mar.
+            Construido alrededor de potentes funciones relacionadas con los juegos, Riptide ha dado un gran golpe
+            y ha sumergido a los usuarios en la sensación de estabilidad.!
+            </p>
+            <div>
+            <br>
+            <h4 style="text-aling: center;">Caracteristicas</h4>
+            </div>
+            <div style="text-align: left;">
+            <br>
+            <ul><li>Soporta Socket AMD AM4 Ryzen™ 3000, 3000 G-Series, 4000 G-Series, 5000 y 5000 G-Series Desktop Processors</li>
+            <li>1 PCIe 4.0 x16 Slot, 2 ranuras PCIe 3.0 x16, 1 PCIe 3.0 x1 Slot
+            1 M.2 Key-E Para el WiFi</li>
+            <li>Opciones de salida gráficoss: HDMI)</li>
+            <li>Audio 7.1 canales HD (Realtek ALC897 Audio Codec), Nahimic Audio</li>
+            <li>6 SATA3, 1 Hyper M.2 (PCIe Gen4 x4)
+            1 Ultra M.2 (PCIe Gen3 x4 & SATA3)</li>
+            <li>3 USB 3.2 Gen2 (Frontal Tipo-C, Trasero Tipo A+C)</li>
+            </ul>
+            </p>
+            </div>
+            <br>
+            <p style="font-size:30px;">
+            <strong>Precio:</strong> ${price}
+            </p>
+        `,
+        grow: 'fullscreem',
+        allowOutsideClick: false,
+        allowScapeKey: false,
+        allowEnterKey: false,
+        showCloseButton: true,
+        confirmButtonText: 'Cerrar',
+        cancelButtonText: 'Cancelar',
+        confirmButtonColor: 'rgb(29, 0, 91)',
+        cancelButtonColor: '#d33',
+        width: '80%',
+        padding: '3em',
+        background: 'white',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Redirigir al carrito de compras
+            window.location.href = '#';
         }
     });
 });
 //obtencion de datos para el producto 3 (board3)
-document.getElementById('board3').addEventListener('click', function() {
+document.getElementById('board3').addEventListener('click', function(event) {
+    // Evitar que el popup se abra si se hace clic en el botón "Comprar"
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -160,7 +177,7 @@ document.getElementById('board3').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -170,13 +187,17 @@ document.getElementById('board3').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 4 (board4)
-document.getElementById('board4').addEventListener('click', function() {
+document.getElementById('board4').addEventListener('click', function(event) {
+    // Evitar que el popup se abra si se hace clic en el botón "Comprar"
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -220,7 +241,7 @@ document.getElementById('board4').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -230,13 +251,17 @@ document.getElementById('board4').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 5 (board5)
-document.getElementById('board5').addEventListener('click', function() {
+document.getElementById('board5').addEventListener('click', function(event) {
+    // Evitar que el popup se abra si se hace clic en el botón "Comprar"
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -280,7 +305,7 @@ document.getElementById('board5').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -290,13 +315,16 @@ document.getElementById('board5').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 6 (board6)
-document.getElementById('board6').addEventListener('click', function() {
+document.getElementById('board6').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -340,7 +368,7 @@ document.getElementById('board6').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -350,7 +378,7 @@ document.getElementById('board6').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });

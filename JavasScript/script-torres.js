@@ -1,5 +1,8 @@
 //obtencion de datos para el producto 1 (Torre1)
-document.getElementById('Torre1').addEventListener('click', function() {
+document.getElementById('Torre1').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -48,7 +51,7 @@ document.getElementById('Torre1').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -58,13 +61,16 @@ document.getElementById('Torre1').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 2 (Torre2)
-document.getElementById('Torre2').addEventListener('click', function() {
+document.getElementById('Torre2').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -113,7 +119,7 @@ document.getElementById('Torre2').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -123,13 +129,16 @@ document.getElementById('Torre2').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 3 (Torre3)
-document.getElementById('Torre3').addEventListener('click', function() {
+document.getElementById('Torre3').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -177,7 +186,7 @@ document.getElementById('Torre3').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -187,13 +196,16 @@ document.getElementById('Torre3').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 4 (Torre4)
-document.getElementById('Torre4').addEventListener('click', function() {
+document.getElementById('Torre4').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -240,7 +252,7 @@ document.getElementById('Torre4').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -250,13 +262,16 @@ document.getElementById('Torre4').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 5 (Torre5)
-document.getElementById('Torre5').addEventListener('click', function() {
+document.getElementById('Torre5').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -302,7 +317,7 @@ document.getElementById('Torre5').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -312,13 +327,16 @@ document.getElementById('Torre5').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 6 (Torre6)
-document.getElementById('Torre6').addEventListener('click', function() {
+document.getElementById('Torre6').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -364,7 +382,7 @@ document.getElementById('Torre6').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -374,13 +392,16 @@ document.getElementById('Torre6').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 7 (Torre7)
-document.getElementById('Torre7').addEventListener('click', function() {
+document.getElementById('Torre7').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -426,7 +447,7 @@ document.getElementById('Torre7').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -436,13 +457,16 @@ document.getElementById('Torre7').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 8 (Torre8)
-document.getElementById('Torre8').addEventListener('click', function() {
+document.getElementById('Torre8').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -490,7 +514,7 @@ document.getElementById('Torre8').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -500,13 +524,16 @@ document.getElementById('Torre8').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 9 (Torre9)
-document.getElementById('Torre9').addEventListener('click', function() {
+document.getElementById('Torre9').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -554,7 +581,7 @@ document.getElementById('Torre9').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -564,13 +591,16 @@ document.getElementById('Torre9').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });
 
 //obtencion de datos para el producto 10 (Torre10)
-document.getElementById('Torre10').addEventListener('click', function() {
+document.getElementById('Torre10').addEventListener('click', function(event) {
+    if (event.target.classList.contains('boton-producto')) {
+        return;
+    }
     // Obtener información del producto desde los atributos del div
     const name = this.querySelector('.titulo-produto').textContent;
     const description = this.querySelector('.titulo-produto').textContent;
@@ -618,7 +648,7 @@ document.getElementById('Torre10').addEventListener('click', function() {
         allowScapeKey: false,
         allowEnterKey: false,
         showCloseButton: true,
-        confirmButtonText: 'Agregar al carrito',
+        confirmButtonText: 'Cerrar',
         cancelButtonText: 'Cancelar',
         confirmButtonColor: 'rgb(29, 0, 91)',
         cancelButtonColor: '#d33',
@@ -628,7 +658,7 @@ document.getElementById('Torre10').addEventListener('click', function() {
     }).then((result) => {
         if (result.isConfirmed) {
             // Redirigir al carrito de compras
-            window.location.href = 'URL_DEL_CARRITO_DE_COMPRAS';
+            window.location.href = '#';
         }
     });
 });

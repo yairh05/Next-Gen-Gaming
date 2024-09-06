@@ -217,6 +217,7 @@ img{
   border: 0;
   position: relative;
   left: 1px;
+  text-align:center;
 
 }
 /*========================*/
@@ -504,7 +505,6 @@ li a {
   }
 
   /*#endregion*/
-  
  /*Configuracion header imagen*/
 .header-menu {
     background-image: url(/img/carrusel-img-1.png);
@@ -645,7 +645,6 @@ footer h1 {
 /*#regionEstilos para footer*/
 footer {
   width: 100%;
-  margin-top: 5rem;
   background-color: #001233;
   color: var(--text-color);
   padding: 2rem 1rem;

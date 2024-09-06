@@ -1,14 +1,5 @@
-window.addEventListener('scroll', function() {
-    var header = document.getElementById('header');
-    if (window.scrollY > 0) {
-        header.classList.add('root-sticky');
-    } else {
-        header.classList.remove('root-sticky');
-    }
-});
-    
-
-    const toggleBtn = document.querySelector('.toggle-btn')
+/**/
+const toggleBtn = document.querySelector('.toggle-btn')
     const toggleBtnIcon = document.querySelector('.toggle-btn i')
     const dropDownMenu = document.querySelector('.dropdown-menu')
 
@@ -20,3 +11,4 @@ window.addEventListener('scroll', function() {
             ?'fa-solid fa-xmark'
             :'fa-solid fa-bars';
         }
+
